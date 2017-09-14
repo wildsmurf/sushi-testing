@@ -1,5 +1,5 @@
 class Sushi < ApplicationRecord
-  belongs_to :user, dependent: :destroy
+  belongs_to :user
   validates_presence_of :name, :price, :description
 
   validates :price, numericality: { greater_than: 0 }
